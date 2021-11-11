@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthkiosk.LoginFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.healthkiosk.RegistrationFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.healthkiosk.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_diffentialDiagnosisFragment"
+            app:destination="@id/diffentialDiagnosisFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_nearestHospitalsFragment"
+            app:destination="@id/nearestHospitalsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_diseasesListFragment"
+            app:destination="@id/diseasesListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_symptomsListFragment"
+            app:destination="@id/symptomsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.healthkiosk.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_aboutFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.healthkiosk.FaqFragment"
+        android:label="FAQ"
+        tools:layout="@layout/fragment_faq">
+        <action
+            android:id="@+id/action_faqFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diffentialDiagnosisFragment"
+        android:name="com.example.healthkiosk.DiffentialDiagnosisFragment"
+        android:label="Differential Diagnosis"
+        tools:layout="@layout/fragment_diffential_diagnosis">
+        <action
+            android:id="@+id/action_diffentialDiagnosisFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nearestHospitalsFragment"
+        android:name="com.example.healthkiosk.NearestHospitalsFragment"
+        android:label="Nearby Hospitals"
+        tools:layout="@layout/fragment_nearest_hospitals">
+        <action
+            android:id="@+id/action_nearestHospitalsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diseasesListFragment"
+        android:name="com.example.healthkiosk.DiseasesListFragment"
+        android:label="Diseases List"
+        tools:layout="@layout/fragment_diseases_list">
+        <action
+            android:id="@+id/action_diseasesListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/symptomsListFragment"
+        android:name="com.example.healthkiosk.SymptomsListFragment"
+        android:label="Symptoms List"
+        tools:layout="@layout/fragment_symptoms_list">
+        <action
+            android:id="@+id/action_symptomsListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

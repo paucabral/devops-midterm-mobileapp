@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/diffentialDiagnosisFragment"
+            android:icon="@drawable/ic_baseline_find_in_page_24"
+            android:title="Differential Diagnosis" />
+        <item
+            android:id="@+id/nearestHospitalsFragment"
+            android:icon="@drawable/ic_baseline_local_hospital_24"
+            android:title="Nearby Hospitals" />
+        <item
+            android:id="@+id/diseasesListFragment"
+            android:icon="@drawable/ic_baseline_sick_24"
+            android:title="Disease List" />
+        <item
+            android:id="@+id/symptomsListFragment"
+            android:icon="@drawable/ic_baseline_visibility_24"
+            android:title="Symptoms List" />
+    </group>
+    <item android:title="About the App">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/aboutFragment"
+                    android:icon="@drawable/ic_baseline_info_24"
+                    android:title="About" />
+                <item
+                    android:id="@+id/faqFragment"
+                    android:icon="@drawable/ic_baseline_question_answer_24"
+                    android:title="FAQ" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/loginFragment"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>
