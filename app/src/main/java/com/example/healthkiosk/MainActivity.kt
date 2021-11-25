@@ -12,6 +12,7 @@ import com.example.healthkiosk.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
+    lateinit var txtName: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(binding.navView, navController)
+
+        txtName="None"
 
         val logout = binding.navView.menu.findItem(R.id.loginFragment).setOnMenuItemClickListener {
             setDrawerLocked()

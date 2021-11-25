@@ -7,7 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.healthkiosk.api.ApiInterface
+import com.example.healthkiosk.api.RetrofitInstance
 import com.example.healthkiosk.databinding.FragmentRegistrationBinding
+import com.example.healthkiosk.model.UserBody
+import com.example.healthkiosk.model.defaultResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class RegistrationFragment : Fragment() {
@@ -27,17 +34,37 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun register() {
-        val email = binding.editRegEmail.text.toString()
-        val username = binding.editRegUsername.text.toString()
-        val password = binding.editRegUsername.text.toString()
+        val username = binding.editRegUsername.text.toString().trim()
+        val password = binding.editRegPassword.text.toString().trim()
+        val email = binding.editRegEmail.text.toString().trim()
+        val first_name = binding.editRegFirstname.text.toString().trim()
+        val last_name = binding.editRegLastname.text.toString().trim()
 
-        if(email != "" && username != "" && password != ""){
-            Toast.makeText(requireActivity(), "Registration Success!", Toast.LENGTH_LONG).show()
-            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
-        }
-        else{
-            Toast.makeText(requireActivity(), "Fields cannot be blank.", Toast.LENGTH_LONG).show()
-        }
+        val retIn = RetrofitInstance.getRetrofitInstance().create(ApiInterface::class.java)
+        val registerInfo = UserBody(username,password,email, first_name,last_name)
+
+        retIn.registerUser(registerInfo).enqueue(object : Callback<defaultResponse> {
+            override fun onFailure(call: Call<defaultResponse>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message,Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<defaultResponse>, response: Response<defaultResponse>) {
+                if (response.code() == 200) {
+//                    Toast.makeText(requireContext(), response.body()?.message, Toast.LENGTH_LONG).show()
+                    if(response.body()?.message == "Email is already in use."
+                        || response.body()?.message == "Username already exists."
+                        || response.body()?.message == "User already exists."){
+                        Toast.makeText(requireContext(), response.body()?.message, Toast.LENGTH_LONG).show()
+                    }
+                    else {
+                        Toast.makeText(requireContext(), response.body()?.message, Toast.LENGTH_LONG).show()
+                        findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+                    }
+                }
+                else{
+                    Toast.makeText(requireContext(), "There was an error creating the account.", Toast.LENGTH_SHORT).show()
+                }
+            }
+        })
     }
 
     private fun gotoLogin() {

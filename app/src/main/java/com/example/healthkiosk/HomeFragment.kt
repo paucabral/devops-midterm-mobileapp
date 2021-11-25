@@ -25,6 +25,8 @@ class HomeFragment : Fragment() {
 
         (activity as MainActivity).setDrawerUnLocked()
 
+        binding.txtName.setText((activity as MainActivity).txtName)
+
         setHasOptionsMenu(true)
         return binding.root
     }
