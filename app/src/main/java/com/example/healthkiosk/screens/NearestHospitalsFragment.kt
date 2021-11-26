@@ -1,4 +1,4 @@
-package com.example.healthkiosk
+package com.example.healthkiosk.screens
 
 import android.content.Intent
 import android.net.Uri

@@ -1,4 +1,4 @@
-package com.example.healthkiosk
+package com.example.healthkiosk.screens
 
 import android.os.Bundle
 import android.view.*
@@ -7,12 +7,13 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.healthkiosk.MainActivity
+import com.example.healthkiosk.R
 import com.example.healthkiosk.api.ApiInterface
 import com.example.healthkiosk.api.RetrofitInstance
 import com.example.healthkiosk.databinding.FragmentLoginBinding
 import com.example.healthkiosk.model.SignInBody
 import com.example.healthkiosk.model.loginResponse
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

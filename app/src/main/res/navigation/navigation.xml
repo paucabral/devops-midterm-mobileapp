@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.healthkiosk.LoginFragment"
+        android:name="com.example.healthkiosk.screens.LoginFragment"
         android:label="Sign In"
         tools:layout="@layout/fragment_login">
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.healthkiosk.RegistrationFragment"
+        android:name="com.example.healthkiosk.screens.RegistrationFragment"
         android:label="Sign Up"
         tools:layout="@layout/fragment_registration">
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.healthkiosk.HomeFragment"
+        android:name="com.example.healthkiosk.screens.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.healthkiosk.AboutFragment"
+        android:name="com.example.healthkiosk.screens.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about">
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/faqFragment"
-        android:name="com.example.healthkiosk.FaqFragment"
+        android:name="com.example.healthkiosk.screens.FaqFragment"
         android:label="FAQ"
         tools:layout="@layout/fragment_faq">
         <action
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/diffentialDiagnosisFragment"
-        android:name="com.example.healthkiosk.DiffentialDiagnosisFragment"
+        android:name="com.example.healthkiosk.screens.DiffentialDiagnosisFragment"
         android:label="Differential Diagnosis"
         tools:layout="@layout/fragment_diffential_diagnosis">
         <action
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/nearestHospitalsFragment"
-        android:name="com.example.healthkiosk.NearestHospitalsFragment"
+        android:name="com.example.healthkiosk.screens.NearestHospitalsFragment"
         android:label="Nearby Hospitals"
         tools:layout="@layout/fragment_nearest_hospitals">
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/diseasesListFragment"
-        android:name="com.example.healthkiosk.DiseasesListFragment"
+        android:name="com.example.healthkiosk.screens.DiseasesListFragment"
         android:label="Diseases List"
         tools:layout="@layout/fragment_diseases_list">
         <action
@@ -101,7 +101,7 @@
     </fragment>
     <fragment
         android:id="@+id/symptomsListFragment"
-        android:name="com.example.healthkiosk.SymptomsListFragment"
+        android:name="com.example.healthkiosk.screens.SymptomsListFragment"
         android:label="Symptoms List"
         tools:layout="@layout/fragment_symptoms_list">
         <action

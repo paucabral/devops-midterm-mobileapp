@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".RegistrationFragment">
+    tools:context=".screens.RegistrationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/titleConstraint"
@@ -13,13 +13,13 @@
             android:id="@+id/btnRegister"
             android:layout_width="200dp"
             android:layout_height="53dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="32dp"
             android:text="register"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editRegPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/editRegPassword2" />
 
         <TextView
             android:id="@+id/txtOr3"
@@ -49,7 +49,7 @@
             android:id="@+id/editRegPassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="164dp"
+            android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
             android:drawablePadding="10dp"
             android:ems="10"
@@ -58,13 +58,28 @@
             app:layout_constraintEnd_toEndOf="@+id/editRegUsername"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editRegUsername"
-            app:layout_constraintTop_toBottomOf="@+id/editRegUsername" />
+            app:layout_constraintTop_toBottomOf="@+id/editRegLastname" />
+
+        <EditText
+            android:id="@+id/editRegPassword2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="confirm password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/editRegUsername"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editRegUsername"
+            app:layout_constraintTop_toBottomOf="@+id/editRegPassword" />
 
         <EditText
             android:id="@+id/editRegEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="36dp"
             android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
             android:drawablePadding="10dp"
             android:ems="10"
@@ -94,8 +109,8 @@
             android:id="@+id/editRegFirstname"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_drive_file_rename_outline_24"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="first name"
@@ -103,14 +118,14 @@
             app:layout_constraintEnd_toEndOf="@+id/editRegEmail"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editRegEmail"
-            app:layout_constraintTop_toBottomOf="@+id/editRegEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/editRegUsername" />
 
         <EditText
             android:id="@+id/editRegLastname"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_drive_file_rename_outline_24"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="last name"
@@ -118,7 +133,7 @@
             app:layout_constraintEnd_toEndOf="@+id/editRegEmail"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editRegEmail"
-            app:layout_constraintTop_toBottomOf="@+id/editRegEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/editRegFirstname" />
 
         <TextView
             android:id="@+id/txtRegistration"
